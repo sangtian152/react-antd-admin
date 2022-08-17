@@ -1,7 +1,10 @@
 {
   "name": "react-app",
   "version": "0.1.0",
-  "private": true,
+  "private": false,
+  "author": "sangtian152 <jzyazn@sina.cn>",
+  "license": "MIT",
+  "homepage":"./",
   "dependencies": {
     "@reduxjs/toolkit": "^1.8.4",
     "@sangtian152/html2pdf": "^1.0.4",

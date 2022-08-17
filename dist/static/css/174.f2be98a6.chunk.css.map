@@ -1,0 +1,1 @@
+{"version":3,"file":"static/css/174.f2be98a6.chunk.css","mappings":"AACI,oBACI","sources":["views/watermark/index.scss"],"sourcesContent":[".watermark-page {\r\n    img {\r\n        width: 100%;\r\n    }\r\n}"],"names":[],"sourceRoot":""}

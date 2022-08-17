@@ -1,0 +1,1 @@
+{"version":3,"file":"static/js/979.6172b3ee.chunk.js","mappings":"+HAQA,UARa,WACT,OACE,iBAAMA,UAAU,WAAhB,UACE,0CAGL,C","sources":["views/home/index.jsx"],"sourcesContent":["const Home = () => {\r\n    return (\r\n      <main className=\"app-page\">\r\n        <h2>首页</h2>\r\n      </main>\r\n    );\r\n  }\r\n\r\nexport default Home"],"names":["className"],"sourceRoot":""}
