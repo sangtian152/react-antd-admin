@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkreact_app=self.webpackChunkreact_app||[]).push([[499],{9499:function(e,a,c){c.r(a);var n=c(184);a.default=function(){return(0,n.jsx)("main",{className:"app-page",children:(0,n.jsx)("h2",{children:"Invoices"})})}}}]);
+//# sourceMappingURL=499.adc304df.chunk.js.map
