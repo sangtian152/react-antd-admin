@@ -13,7 +13,8 @@ export const routes2 = [
     title: "登录页面",
     path: "/login",
     component: lazy(() => import('@/views/login')),
-  }
+  },
+  { path: "*", component: lazy(() => import('@/views/404'))}
 ]
 const menuList = [
     {
@@ -56,11 +57,25 @@ const menuList = [
         {
             title: "基础表格",
             path: "/table/basic",
-            component: lazy(() => import('@/views/invoices')),
+            auth: true,
+            component: lazy(() => import('@/views/table')),
         }
       ]
     },
-    { path: "*", component: lazy(() => import('@/views/404'))}
+    {
+      title: "图片",
+      path: "/image",
+      icon: <DesktopOutlined />,
+      component: lazy(() => import('@/layout')),
+      children: [
+        {
+            title: "图片加水印",
+            path: "/image/watermark",
+            auth: true,
+            component: lazy(() => import('@/views/watermark')),
+        }
+      ]
+    }
 ]
 
 export default menuList

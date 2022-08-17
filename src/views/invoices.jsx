@@ -1,6 +1,6 @@
 const Invoices = () => {
     return (
-      <main style={{ padding: "1rem 0" }}>
+      <main className="app-page">
         <h2>Invoices</h2>
       </main>
     );

@@ -105,9 +105,7 @@ const Login = () => {
               </Button>
             </Form.Item>
             <Form.Item>
-              <span>账号 : admin 密码 : 随便填</span>
-              <br />
-              <span>账号 : editor 密码 : 随便填</span>
+              <span>账号 : admin 密码 : 123456</span>
             </Form.Item>
           </Spin>
         </Form>

@@ -1,4 +1,5 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit"
+import { getToken, setToken } from "@/utils/auth"
 import { reqUserInfo } from "@/api/user";
 // 获取用户信息
 export const getUserInfo = createAsyncThunk("user/getUserInfo", async (params, thunkAPI) => {
@@ -30,22 +31,35 @@ export const login = createAsyncThunk(
     async (params, thunkAPI) => {
       try {
         console.log(params, "login");
+        const token = "token"
+        setToken(token)
         return {
-            token: "token",
+            token,
         };
       } catch (error) {
         return thunkAPI.rejectWithValue({ errorMsg: error.message });
       }
     }
   );
-
+// 退出登录
+export const logout = createAsyncThunk(
+  "user/logout",
+  async (params, thunkAPI) => {
+    try {
+      console.log(params, "logout");
+      return {};
+    } catch (error) {
+      return thunkAPI.rejectWithValue({ errorMsg: error.message });
+    }
+  }
+);
 export const slice = createSlice({
     name: "user",
     initialState: {
         name: "",
         role: "",
         avatar:"https://s1.ax1x.com/2020/04/28/J5hUaT.jpg",
-        token: "",
+        token: getToken(),
     },
     reducers: {
         setUserToken(state, action) {
@@ -75,6 +89,19 @@ export const slice = createSlice({
             console.log(payload)
         });
         builder.addCase(login.rejected, (state, action) => {
+            state.loading = 'failure';
+        });
+        builder.addCase(logout.pending, (state, action) => {
+          state.loading = 'pending';
+        });
+        // 接口请求返回
+        builder.addCase(logout.fulfilled, (state, action) => {
+            console.log(action)
+            state.loading = 'fulfilled';
+            // 这里处理数据
+            state.token = "";
+        });
+        builder.addCase(logout.rejected, (state, action) => {
             state.loading = 'failure';
         });
         builder.addCase(getUserInfo.pending, (state, action) => {
