@@ -99,7 +99,7 @@ class TagList extends Component {
   }
   handleCloseAllTags = () => {
     this.props.emptyTaglist();
-    this.props.navigate("/dashboard");
+    this.props.navigate("/home");
     this.closeContextMenu();
   };
   handleCloseOtherTags = () => {
