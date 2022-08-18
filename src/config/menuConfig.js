@@ -5,8 +5,10 @@
  import { lazy } from 'react';
 
  import {
-    ContainerOutlined,
+    HomeOutlined,
+    TableOutlined,
     DesktopOutlined,
+    FileImageOutlined,
   } from '@ant-design/icons';
 export const routes2 = [
   {
@@ -22,7 +24,7 @@ const menuList = [
       path: "/",
       redirect: '/home',
       hiddenChild: true,
-      icon: <ContainerOutlined />,
+      icon: <HomeOutlined />,
       component: lazy(() => import('@/layout')),
       children: [
         {
@@ -30,6 +32,7 @@ const menuList = [
           path: "/home",
           auth: true,
           breadcrumb: false,
+          affix: true,
           component: lazy(() => import('@/views/home')),
         }
       ]
@@ -51,7 +54,7 @@ const menuList = [
     {
       title: "表格",
       path: "/table",
-      icon: <DesktopOutlined />,
+      icon: <TableOutlined />,
       component: lazy(() => import('@/layout')),
       children: [
         {
@@ -65,7 +68,7 @@ const menuList = [
     {
       title: "图片",
       path: "/image",
-      icon: <DesktopOutlined />,
+      icon: <FileImageOutlined />,
       component: lazy(() => import('@/layout')),
       children: [
         {

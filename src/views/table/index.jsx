@@ -83,7 +83,6 @@ const basicTable = () => (
             title="Title"
             className="site-page-header"
             extra={[
-            <Button key="3">Operation</Button>,
             <Button key="1" type="primary" onClick={doPdf}>导出</Button>
             ]}
          />

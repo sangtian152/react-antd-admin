@@ -15,6 +15,12 @@ code {
 .app-container {
   height: 100%;
 }
+.app-spin {
+  display: flex;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+}
 .app-layout {
   overflow: auto;
   .app-header,
@@ -26,5 +32,6 @@ code {
   }
   .app-footer {
     text-align: center;
+    padding: 15px 50px;
   }
 }

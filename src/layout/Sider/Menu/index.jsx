@@ -1,8 +1,15 @@
 import { Menu } from 'antd'
 import React, { Component } from "react";
+import { connect } from "react-redux";
 import { NavLink } from 'react-router-dom';
-import withRouter from '@/router/withRouter'
+import { Scrollbars } from "react-custom-scrollbars";
+import withRouter from '@/router/withRouter';
 import menuList from '@/config/menuConfig';
+import { getMenuItemInMenuListByProperty } from "@/utils";
+import {
+  addTag
+} from "@/store/modules/tagsView";
+import "./index.scss"
 function getItem(label, key, icon, children, type) {
     return {
       key,
@@ -50,30 +57,37 @@ class LayoutMenu extends Component {
       this.setState({openKeys: latestOpenKey ? [latestOpenKey] : []});
     }
   };
+  handleMenuSelect = ({ key = "/home" }) => {
+    let menuItem = getMenuItemInMenuListByProperty(menuList, "path", key);
+    this.props.dispatch(addTag(menuItem));
+  };
   componentDidMount() {
     const menuTreeNode = this.getMenuNodes(menuList);
     this.rootSubmenuKeys = menuList.filter(item => item.children).map(item => item.path)
     this.setState({
       menuTreeNode,
     });
+    this.handleMenuSelect({});
   }
-  // const items = getMenuNodes(menuList);
   render() {
     const path = this.props.location.pathname;
     const openKeys = this.state.openKeys;
     return (
-      <div>
+      <div className="sidebar-menu-container">
+        <Scrollbars autoHide autoHideTimeout={1000} autoHideDuration={200}>
           <Menu
               selectedKeys={[path]}
               openKeys={openKeys}
+              onSelect={this.handleMenuSelect}
               onOpenChange={(keys) => this.onOpenChange(keys)}
               mode="inline"
               theme="dark"
               items={this.state.menuTreeNode}
           />
+        </Scrollbars>
       </div>
     )
   }
 }
 
-export default withRouter(LayoutMenu)
+export default connect((state) => state.user)(withRouter(LayoutMenu));

@@ -58,7 +58,7 @@ export const slice = createSlice({
     initialState: {
         name: "",
         role: "",
-        avatar:"https://s1.ax1x.com/2020/04/28/J5hUaT.jpg",
+        avatar:"",
         token: getToken(),
     },
     reducers: {

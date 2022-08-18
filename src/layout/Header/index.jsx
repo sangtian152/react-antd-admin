@@ -7,6 +7,7 @@ import BreadCrumb from "@/components/BreadCrumb";
 import FullScreen from "@/components/FullScreen";
 import Hamburger from "@/components/Hamburger";
 import Settings from "@/components/Settings";
+import defaultAvatar from "@/assets/avatar.gif"
 import "./index.scss";
 const { Header } = Layout;
 const LayoutHeader = () => {
@@ -90,7 +91,7 @@ const LayoutHeader = () => {
           <div className="dropdown-wrap">
             <Dropdown overlay={menu}>
               <div>
-                <Avatar shape="square" size="medium" src={avatar} />
+                <Avatar shape="square" size="medium" src={avatar || defaultAvatar} />
                 <CaretDownOutlined />
               </div>
             </Dropdown>

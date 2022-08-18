@@ -36,12 +36,18 @@ const ImageMark = () => {
       setImg(can.getBase64());
     });
   };
+  const doClear = () => {
+    setImg("")
+  }
   return (
     <main className="app-page watermark-page">
       <PageHeader
         title="图片加水印"
         className="site-page-header"
         extra={[
+          <Button key="2" type="primary" onClick={doClear}>
+            重置
+          </Button>,
           <Button key="1" type="primary" onClick={doMark}>
             生成水印
           </Button>,
