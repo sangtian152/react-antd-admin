@@ -27,7 +27,7 @@
     - @sangtian152/watermark `图片加水印` [github地址](https://github.com/sangtian152/watermark) [gitee地址](https://gitee.com/sangtian152/watermark)
 
 ```tip
-`html2pdf`和`watermark`，也是自己造的轮子，在这里给自己宣传一下，哈哈。
+html2pdf和watermark，也是自己造的轮子，在这里给自己宣传一下，哈哈。
 
 纯js实现，不依赖其他框架，不管你是`react`还是`Vue`亦或是`Angular`，都可以放心使用
 ```
