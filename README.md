@@ -1,70 +1,98 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# 简介
 
-## Available Scripts
+[react-antd-admin](https://sangtian152.github.io/react-antd-admin/) 是一个基于 `React` 和 `Ant Design` 的后台管理系统模板。内置用户登录/登出，动态路由，权限校验，用户管理等典型的业务模型。
 
-In the project directory, you can run:
+如果感觉项目中满满的`Vue`气息，幸勿见怪。因为...
 
-### `npm start`
+部分逻辑参考了 [vue-element-admin](https://github.com/PanJiaChen/vue-element-admin/) ，这是一个基于 `Vue` 和 `ElementUI` 的优秀的后台管理系统模板，向大佬致敬！ 
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+至于为什么参考[vue-element-admin](https://github.com/PanJiaChen/vue-element-admin/)，因为... 
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+我的主技术栈一直是 `Vue`，只是最近入坑了 `React` ，对于 `React` ，四舍五入约等于小白，难免有些许不足之处，欢迎指正。
 
-### `npm test`
+- [在线预览](https://sangtian152.github.io/react-antd-admin/)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+# 技术栈
+  - react v18.2
+  - react-redux v8.0
+  - react-router-dom v6.3
+  - @reduxjs/toolkit v1.8
+  - antd v4.22
+  - axios v0.27
+  - 其他依赖
+    - @sangtian152/html2pdf  html生成pdf  [github地址](https://github.com/sangtian152/html2pdf) [gitee地址](https://gitee.com/sangtian152/html2pdf)
+    - @sangtian152/watermark 图片加水印 [github地址](https://github.com/sangtian152/watermark) [gitee地址](https://gitee.com/sangtian152/watermark)
 
-### `npm run build`
+# 功能
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+```bash
+- 登录 / 注销
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- 权限验证
+  - 页面权限
+  - 路由权限
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- 全局功能
+  - 动态侧边栏（支持多级路由嵌套）
+  - 动态面包屑
+  - 本地/后端 mock 数据
+  - Screenfull全屏
+  - 自适应收缩侧边栏
 
-### `npm run eject`
+- 错误页面
+  - 404
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+# 目录结构
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+```bash
+├─ public                     # 静态资源
+│   ├─ favicon.ico            # favicon图标
+│   └─ index.html             # html模板
+├─ src                        # 项目源代码
+│   ├─ api                    # 所有请求
+│   ├─ assets                 # 图片 字体等静态资源
+│   ├─ components             # 全局公用组件
+│   ├─ config                 # 全局配置
+│   │   ├─ menuConfig.js      # 导航菜单配置
+│   ├─ store                  # 全局 store管理
+│   ├─ styles                 # 全局样式
+│   ├─ utils                  # 全局公用方法
+│   ├─ views                  # views 所有页面
+│   ├─ App.jsx                # 入口页面
+│   ├─ defaultSettings.js     # 全局默认配置
+│   └─index.jsx               # 源码入口
+├── .env.development          # 开发环境变量配置
+├── .env.production           # 生产环境变量配置
+├── config-overrides.js       # 对cra的webpack自定义配置
+└── package.json              # package.json
+```
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+# 安装
 
-## Learn More
+```shell
+# 克隆项目
+git clone https://github.com/sangtian152/react-antd-admin.git
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+# 进入项目目录
+cd react-antd-admin
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+# 安装依赖
+npm install
 
-### Code Splitting
+# 切换淘宝源，解决 npm 下载速度慢的问题
+npm install --registry=https://registry.npm.taobao.org
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+# 启动服务
+npm start
+```
 
-### Analyzing the Bundle Size
+启动完成后会自动打开浏览器访问 [http://localhost:3000](http://localhost:3000)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
 
-### Making a Progressive Web App
+# 鼓励作者
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+作为个人开发者，维护开源实属不易。如果您觉得本项目对你有些许帮助的话，还请帮忙点个 star 哈~~
+如果您有余力的话也非常感谢您对我的赞赏，您的赞赏，是对我创作最大的认可和鼓励。
