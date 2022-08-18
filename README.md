@@ -32,7 +32,7 @@
 ```tip
 html2pdf和watermark，也是自己造的轮子，在这里给自己宣传一下，哈哈。
 
-纯js实现，不依赖其他框架，不管你是`react`还是`Vue`亦或是`Angular`，都可以放心使用
+纯js实现，不依赖其他框架，不管你是react还是Vue亦或是Angular，都可以放心使用
 ```
 
 # 功能
