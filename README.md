@@ -21,8 +21,8 @@
   - antd v4.22
   - axios v0.27
   - 其他依赖
-    - @sangtian152/html2pdf  html生成pdf  [github地址](https://github.com/sangtian152/html2pdf) [gitee地址](https://gitee.com/sangtian152/html2pdf)
-    - @sangtian152/watermark 图片加水印 [github地址](https://github.com/sangtian152/watermark) [gitee地址](https://gitee.com/sangtian152/watermark)
+    - @sangtian152/html2pdf  `html生成pdf`  [github地址](https://github.com/sangtian152/html2pdf) [gitee地址](https://gitee.com/sangtian152/html2pdf)
+    - @sangtian152/watermark `图片加水印` [github地址](https://github.com/sangtian152/watermark) [gitee地址](https://gitee.com/sangtian152/watermark)
 
 # 功能
 
@@ -94,5 +94,4 @@ npm start
 
 # 鼓励作者
 
-作为个人开发者，维护开源实属不易。如果您觉得本项目对你有些许帮助的话，还请帮忙点个 star 哈~~
-如果您有余力的话也非常感谢您对我的赞赏，您的赞赏，是对我创作最大的认可和鼓励。
+开源不易，如果对你有用，请给个star！
