@@ -8,7 +8,7 @@ export const slice = createSlice({
         addTag: (state, {payload}) => {
             const { title, path, affix } = payload
             const hasTag = state.taglist.find((item) => item.path === path)
-            if (!hasTag) {
+            if (!hasTag && path !== '/') {
                 state.taglist = state.taglist.concat({ title, path, affix })
             }
         },
